@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <windows.h>
+
+using namespace std;
+using std::string;
+
+int main() {
+
+ do{
+ 
+    setlocale(LC_ALL, "Ru");
+    
+    string Quest_One;
+    cout << "Введите вопрос: ";
+    cin >> Quest_One;
+
+    for (int i = 0; i <= 100; i++) {
+        Sleep(50);
+        cout << "Анализируем " << i << "%: " << endl;
+        if (i == 99)
+        {
+            cout << "Хмм..... сбой чиним баг 10 секунд пожалуйста\n";
+            Sleep(10000);
+
+        }
+
+
+    }
+    srand(time(NULL));
+    int a = 0 + rand() % 100;
+    if (a < 50)
+    {
+        cout << "Выпало Нет" << endl;
+    }
+    else if (a > 50) {
+
+        cout << "Выпало Да" << endl;
+    }
+   
+ } while (true);
+
+        //———————————————-
+        system("pause");
+        exit(0);
+        return 0;
+    
+    }
